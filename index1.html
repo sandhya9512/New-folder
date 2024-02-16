@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .image {
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.5s ease; /* Add smooth transition for better user experience */
+    }
+
+    .full-height {
+      transform: scaleY(2); /* Adjust the scaling factor for full height */
+    }
+
+    .full-width {
+      transform: scaleX(2); /* Adjust the scaling factor for full width */
+    }
+  </style>
+</head>
+<body>
+  <button onclick="toggleHeight()">Full Height</button>
+  <button onclick="toggleWidth()">Full Width</button>
+  <div class="container">
+    <img src="https://img.freepik.com/free-photo/online-fashion-shopping-with-laptop_23-2150400630.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707868800&semt=ais" alt="Your Image" class="image" id="imageElement">
+  </div>
+  
+  
+
+  <script>
+    function toggleHeight() {
+      document.getElementById("imageElement").classList.toggle("full-height");
+      document.getElementById("imageElement").classList.remove("full-width");
+    }
+
+    function toggleWidth() {
+      document.getElementById("imageElement").classList.toggle("full-width");
+      document.getElementById("imageElement").classList.remove("full-height");
+    }
+  </script>
+</body>
+</html>
